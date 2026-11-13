@@ -65,7 +65,8 @@ All imagery was downloaded from the original website at its highest available re
 | `assets/images/studio-hero.jpg` | `assets/images/image02.jpg` | 1600×901 |
 | `assets/images/action-figure-alpha-poster.jpg` | `assets/images/image01.jpg` | 1254×1254 |
 | `assets/images/action-figure-alpha-key-art.jpg` | `assets/images/gallery01/912f84ae_original.jpg` | 1254×755 |
-| `assets/images/action-figure-alpha-character.jpg` | `assets/images/gallery01/fbeaf5b9.jpg` | 752×752 |
+| `assets/images/action-figure-alpha-character.jpg` | `assets/images/gallery01/fbeaf5b9.jpg` | 752×752 (no longer used on the page) |
+| `assets/videos/action-figure-alpha-cinematic-sequence.mp4` | supplied by the studio (self-hosted) | 848×480, 10 s |
 | `assets/images/syntric-purple-nights.jpg` | `assets/images/image04.jpg` | 915×851 |
 | `assets/images/x-61-parallel-voices.jpg` | `assets/images/image07.jpg` | 915×915 |
 | `assets/images/daisy-blue-the-blue-note.jpg` | `assets/images/image08.jpg` | 915×915 |
@@ -95,7 +96,7 @@ The original website didn't host its audio or video files. It embedded them from
 | Ziad Mahjoub – *Lotus* (2434404255) | SoundCloud | same |
 | Action Figure Alpha I – Trailer (`hvyGp6KXUqI`) | YouTube | Privacy-enhanced embed in the lightbox |
 | Action Figure Alpha I – Full Sequence (`NbtfHszOKrI`) | YouTube | same |
-| Action Figure Alpha I – Visual Clip (`rKe8yPPwskI`) | YouTube | same (linked from the original site's gallery) |
+| Action Figure Alpha – Cinematic Sequence | none (local MP4) | Self-hosted in `assets/videos/`, plays in the lightbox |
 
 These are the only external requests. They're loaded on demand, and everything else (images, fonts, CSS, JS) is local.
 

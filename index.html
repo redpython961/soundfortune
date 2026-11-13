@@ -27,6 +27,17 @@
   <link rel="preconnect" href="https://w.soundcloud.com">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add("js");</script>
+  <style>
+    /* About: show the full, uncropped studio photo */
+    .about__frame { aspect-ratio: 1600 / 901; }
+    .about__frame img { position: static; inset: auto; width: 100%; height: auto; object-fit: contain; }
+    .about__visual { padding-bottom: 0; }
+    .about__emblem { position: relative; right: auto; bottom: auto; width: 30%; max-width: 180px; margin: 20px 0 0 auto; }
+    /* Local video reel: live muted preview in the card */
+    .reel__preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1.1s var(--ease), filter .6s; }
+    .reel:hover .reel__preview { transform: scale(1.06); filter: saturate(1.15); }
+    .lightbox__frame video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -167,15 +178,15 @@
             <span class="sr-only">Play video: Action Figure Alpha I full sequence</span>
           </button>
 
-          <button class="reel reveal" data-video="rKe8yPPwskI" data-title="Action Figure Alpha I — Visual Clip">
-            <img src="assets/images/action-figure-alpha-character.jpg" alt="" loading="lazy" width="752" height="752">
+          <button class="reel reveal" type="button" data-local-video="assets/videos/action-figure-alpha-cinematic-sequence.mp4" data-title="Action Figure Alpha — A Cinematic Sequence">
+            <video class="reel__preview" src="assets/videos/action-figure-alpha-cinematic-sequence.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
             <span class="reel__shade"></span>
             <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
             <span class="reel__meta">
-              <span class="reel__tag">Visual Clip</span>
-              <span class="reel__title">Alpha I · Character</span>
+              <span class="reel__tag">Cinematic Sequence</span>
+              <span class="reel__title">Alpha I · Title Sequence</span>
             </span>
-            <span class="sr-only">Play video: Action Figure Alpha I visual clip</span>
+            <span class="sr-only">Play video: Action Figure Alpha, a cinematic sequence</span>
           </button>
         </div>
 
@@ -274,8 +285,8 @@
               <svg viewBox="0 0 48 48"><path d="M6 24h4l3-9 4 18 4-24 4 30 4-22 4 14 3-7h6" /></svg>
             </span>
             <h3 class="card__title">Audio Post-Production</h3>
-            <p class="card__text">Dialogue editing, sound cleanup, sound design, mixing, and mastering for films, documentaries, and video content.</p>
-            <ul class="card__list"><li>Dialogue editing</li><li>Audio cleanup</li><li>Sound design</li><li>Mixing &amp; mastering</li></ul>
+            <p class="card__text">Dialogue editing, sound cleanup, sound design, Dolby Atmos mixing, mixing, and mastering for films, documentaries, and video content.</p>
+            <ul class="card__list"><li>Dialogue editing</li><li>Audio cleanup</li><li>Sound design</li><li>Dolby Atmos mixing</li><li>Mixing &amp; mastering</li></ul>
             <span class="card__num" aria-hidden="true">01</span>
           </article>
 
@@ -317,7 +328,7 @@
       <div class="container about__grid">
         <div class="about__visual reveal">
           <figure class="about__frame">
-            <img src="assets/images/studio-hero.jpg" alt="Sound Fortune Productions studio workspace with monitors and purple ambient lighting" loading="lazy" width="1600" height="901" data-parallax="0.08">
+            <img src="assets/images/studio-hero.jpg" alt="Sound Fortune Productions studio workspace with monitors and purple ambient lighting" loading="lazy" width="1600" height="901">
           </figure>
           <figure class="about__emblem">
             <img src="assets/images/sound-fortune-emblem.jpg" alt="Sound Fortune Productions emblem" loading="lazy" width="600" height="600">
@@ -397,5 +408,46 @@
   </div>
 
   <script src="js/main.js" defer></script>
+  <script>
+    /* Local (self-hosted) video: card preview + lightbox playback */
+    document.addEventListener("DOMContentLoaded", function () {
+      var lb = document.getElementById("lightbox");
+      var frame = document.getElementById("lightboxFrame");
+      var title = document.getElementById("lightboxTitle");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      document.querySelectorAll("[data-local-video]").forEach(function (btn) {
+        var preview = btn.querySelector(".reel__preview");
+        if (preview) {
+          // show a real frame instead of a black first frame
+          preview.addEventListener("loadedmetadata", function () { if (preview.currentTime === 0) preview.currentTime = 0.5; });
+          // play the muted preview only while the card is on screen (and motion is allowed)
+          if (!reduce && "IntersectionObserver" in window) {
+            new IntersectionObserver(function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) { var p = preview.play(); if (p && p.catch) p.catch(function () {}); }
+                else preview.pause();
+              });
+            }, { threshold: 0.25 }).observe(btn);
+          }
+        }
+        btn.addEventListener("click", function () {
+          if (window.Players) window.Players.pauseAll();
+          if (preview) preview.pause();
+          var v = document.createElement("video");
+          v.src = btn.getAttribute("data-local-video");
+          v.controls = true; v.autoplay = true; v.playsInline = true;
+          v.setAttribute("playsinline", "");
+          title.textContent = btn.getAttribute("data-title") || "";
+          frame.innerHTML = "";
+          frame.appendChild(v);
+          lb.hidden = false;
+          document.body.classList.add("is-locked");
+          lb.querySelector(".lightbox__close").focus();
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        });
+      });
+    });
+  </script>
 </body>
 </html>
