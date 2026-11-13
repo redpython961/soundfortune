@@ -1,0 +1,17 @@
+# source path on soundfortuneproductions.com  ->  local path in this project
+# (video posters are saved to assets/videos/originals/ — the page uses optimized copies in assets/videos/)
+assets/images/image05.jpg                       assets/images/sound-fortune-logo-banner.jpg
+assets/images/image02.jpg                       assets/images/studio-hero.jpg
+assets/images/gallery01/912f84ae_original.jpg   assets/images/action-figure-alpha-key-art.jpg
+assets/images/gallery01/fbeaf5b9.jpg            assets/images/action-figure-alpha-character.jpg
+assets/images/image01.jpg                       assets/images/action-figure-alpha-poster.jpg
+assets/videos/video01_thumbnail.jpg             assets/videos/originals/action-figure-alpha-trailer-poster.jpg
+assets/videos/video02_thumbnail.jpg             assets/videos/originals/action-figure-alpha-full-sequence-poster.jpg
+assets/images/image04.jpg                       assets/images/syntric-purple-nights.jpg
+assets/images/image07.jpg                       assets/images/x-61-parallel-voices.jpg
+assets/images/image08.jpg                       assets/images/daisy-blue-the-blue-note.jpg
+assets/images/image09.jpg                       assets/images/ziad-mahjoub-lotus.jpg
+assets/images/image06.jpg                       assets/images/sound-fortune-emblem.jpg
+assets/images/share.jpg                         assets/images/og-share.jpg
+assets/images/favicon.png                       assets/icons/favicon.png
+assets/images/apple-touch-icon.png              assets/icons/apple-touch-icon.png
