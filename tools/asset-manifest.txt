@@ -1,7 +1,6 @@
 # source path on soundfortuneproductions.com  ->  local path in this project
 # (video posters are saved to assets/videos/originals/ — the page uses optimized copies in assets/videos/)
 assets/images/image05.jpg                       assets/images/sound-fortune-logo-banner.jpg
-assets/images/image02.jpg                       assets/images/studio-hero.jpg
 assets/images/gallery01/912f84ae_original.jpg   assets/images/action-figure-alpha-key-art.jpg
 assets/images/gallery01/fbeaf5b9.jpg            assets/images/action-figure-alpha-character.jpg
 assets/images/image01.jpg                       assets/images/action-figure-alpha-poster.jpg

@@ -15,10 +15,11 @@ This is a full redesign of <https://www.soundfortuneproductions.com/>. It keeps 
 |---|---------|--------------|
 | — | **Hero** | Headline "Where sound meets vision", studio photo with animated purple aurora, original gold logo banner, scroll indicator |
 | 01 | **Visual Work** | *Action Figure Alpha I*: poster, description, full credits, video gallery (Trailer, Full Sequence, Visual Clip) in a lightbox, key-art still |
-| 02 | **Music** | Syntric (*Purple Nights*), X-61 (*Parallel Voices*), Daisy Blue (*The Blue Note*), Ziad Mahjoub (*Lotus*), each with its original artwork and a custom audio player |
-| 03 | **Services** | Audio Post-Production · Film Scoring & Original Music · Podcast Production · Cinematic Video & Visual Editing |
-| 04 | **About** | Ziad Mahjoub biography, roles, focus areas, studio imagery |
-| 05 | **Contact** | "Let's create something extraordinary", email button, copy-to-clipboard email |
+| 02 | **Music** | Syntric (*Purple Nights*), X-61 (*Parallel Voices*), Daisy Blue (*The Blue Note*), Ziad Mahjoub (*Lotus*), each with its original artwork and a custom audio player, plus the Dolby Atmos release *The Journey* |
+| 03 | **Services** | Audio Post-Production · Film Scoring & Original Music · Podcast Production · Cinematic Video & Visual Editing, plus a Custom Composition block (what it is, five example services, how it differs from beat production, mixing and mastering) |
+| 04 | **Pricing** | Service menu with Lebanon and International starting rates (USD) in five categories, Custom Composition starting rates, booking and project terms |
+| 05 | **About** | Ziad Mahjoub biography, roles, focus areas, studio image |
+| 06 | **Contact** | "Let's create something extraordinary", email button, copy-to-clipboard email |
 | — | **Footer** | © 2026 Sound Fortune Productions. All Rights Reserved. Back to top |
 
 ### Features
@@ -62,7 +63,8 @@ All imagery was downloaded from the original website at its highest available re
 | Local file | Original source | Size |
 |---|---|---|
 | `assets/images/sound-fortune-logo-banner.jpg` | `assets/images/image05.jpg` | 2160×720 |
-| `assets/images/studio-hero.jpg` | `assets/images/image02.jpg` | 1600×901 |
+| `assets/images/studio-hero.jpg` | supplied by the studio (replaces the original site photo) | 1448×1086 |
+| `assets/images/the-journey-cover.jpg` | supplied by the studio (cover cropped from the release announcement) | 654×653 |
 | `assets/images/action-figure-alpha-poster.jpg` | `assets/images/image01.jpg` | 1254×1254 |
 | `assets/images/action-figure-alpha-key-art.jpg` | `assets/images/gallery01/912f84ae_original.jpg` | 1254×755 |
 | `assets/images/action-figure-alpha-character.jpg` | `assets/images/gallery01/fbeaf5b9.jpg` | 752×752 (no longer used on the page) |
@@ -147,6 +149,8 @@ Alternatives: `npx serve .`, or VS Code's **Live Server** extension.
 
 ## Editing content
 
+- **Prices:** the tables are in the `PRICING` section of `index.html`; each row is one `<tr>`.
+- **The Journey listen button:** there is no streaming link yet. In the `atmos` block of `index.html`, a commented-out button shows where to paste it.
 - **Text:** all copy is in `index.html` and organized by section with clear comments.
 - **Colors:** the CSS variables at the top of `css/style.css` (`--bg`, `--accent`, and so on).
 - **Swap a SoundCloud track:** change `data-track` on the matching `.player` element in `index.html`.

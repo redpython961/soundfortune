@@ -29,7 +29,7 @@
   <script>document.documentElement.classList.add("js");</script>
   <style>
     /* About: show the full, uncropped studio photo */
-    .about__frame { aspect-ratio: 1600 / 901; }
+    .about__frame { aspect-ratio: 1448 / 1086; }
     .about__frame img { position: static; inset: auto; width: 100%; height: auto; object-fit: contain; }
     .about__visual { padding-bottom: 0; }
     .about__emblem { position: relative; right: auto; bottom: auto; width: 30%; max-width: 180px; margin: 20px 0 0 auto; }
@@ -46,6 +46,7 @@
     "name": "Sound Fortune Productions",
     "founder": {"@type": "Person", "name": "Ziad Mahjoub", "jobTitle": "Music Producer, Composer, Sound Designer"},
     "email": "soundfortuneproductions@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB"},
     "description": "Independent creative studio for music, sound and moving images."
   }
   </script>
@@ -67,6 +68,7 @@
         <a href="#visual" data-nav>Visual Work</a>
         <a href="#music" data-nav>Music</a>
         <a href="#services" data-nav>Services</a>
+        <a href="#pricing" data-nav>Pricing</a>
         <a href="#about" data-nav>About</a>
         <a href="#contact" data-nav>Contact</a>
       </nav>
@@ -267,6 +269,29 @@
           </article>
 
         </div>
+        <!-- IMMERSIVE RELEASE: THE JOURNEY (DOLBY ATMOS) -->
+        <article class="atmos reveal" aria-labelledby="atmos-title">
+          <div class="atmos__art">
+            <img src="assets/images/the-journey-cover.jpg" alt="Cover art for The Journey: a forest stream beside a neon-lit path" loading="lazy" width="654" height="653">
+            <span class="atmos__live"><i></i> Now live</span>
+          </div>
+          <div class="atmos__body">
+            <p class="label">Cinema Surround · Immersive Release</p>
+            <h3 class="atmos__title" id="atmos-title">The Journey</h3>
+            <p class="atmos__by">Sound Fortune Productions</p>
+            <p class="atmos__format"><span>Dolby Atmos</span></p>
+            <p class="atmos__text">Mixed in Dolby Atmos for cinema-style surround, with sound placed around and above the listener. Now live, distributed through TuneCore.</p>
+            <ul class="atmos__specs">
+              <li><b>Format</b>Dolby Atmos</li>
+              <li><b>Status</b>Now live</li>
+              <li><b>Distribution</b>TuneCore</li>
+            </ul>
+            <!-- To add a listen button, paste the streaming link here:
+                 <a class="btn btn--primary" href="STREAMING-LINK" target="_blank" rel="noopener">Listen in Dolby Atmos</a> -->
+            <a class="btn btn--ghost" href="#pricing">Dolby Atmos mixing rates</a>
+          </div>
+        </article>
+
         <p class="music__note reveal">Audio streams through the official SoundCloud player. <a href="https://soundcloud.com" target="_blank" rel="noopener">Powered by SoundCloud</a>.</p>
       </div>
     </section>
@@ -320,6 +345,137 @@
             <span class="card__num" aria-hidden="true">04</span>
           </article>
         </div>
+
+        <div class="comp">
+          <div class="comp__intro reveal">
+            <p class="label">Custom Composition</p>
+            <h3 class="comp__title">Original music, written for your project.</h3>
+            <p class="comp__text">Custom composition is original music written and produced specifically for a client's project, rather than a pre-existing track or a generic instrumental. It can include original melodies, harmonies, chord progressions, arrangements, sound design, and production tailored to a brief, scene, brand, or artistic vision.</p>
+            <a class="btn btn--ghost" href="#pricing">See starting rates</a>
+          </div>
+          <ul class="comp__list reveal">
+            <li><b>Film scoring</b><span>Original music for a film scene, short film, or cinematic sequence.</span></li>
+            <li><b>Corporate music</b><span>Music for a brand, presentation, or company identity.</span></li>
+            <li><b>Game music</b><span>Themes, ambient beds, cues, and soundtrack pieces.</span></li>
+            <li><b>Advertising music</b><span>A custom musical piece for a commercial or campaign.</span></li>
+            <li><b>Artist composition</b><span>Original melodies, harmonies, chord progressions, and arrangements for an artist.</span></li>
+          </ul>
+        </div>
+
+        <div class="differs reveal">
+          <p class="label">How it differs from other services</p>
+          <dl class="differs__grid">
+            <div><dt>Beat production</dt><dd>Creating an instrumental track, often for an artist.</dd></div>
+            <div><dt>Custom composition</dt><dd>Writing original music to meet a specific brief or creative purpose.</dd></div>
+            <div><dt>Mixing</dt><dd>Balancing and processing recorded or produced elements.</dd></div>
+            <div><dt>Mastering</dt><dd>Finalizing a mix for release and delivery.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal"><span class="idx">04</span> Service Menu &amp; Starting Rates</p>
+          <h2 class="section__title reveal" id="pricing-title">Clear starting rates.<br><span class="muted">Custom quotes for every project.</span></h2>
+          <p class="section__intro reveal">Pro audio · Music · Podcast · Film. All prices are starting rates in USD, with separate rates for clients in Lebanon and international clients.</p>
+        </header>
+
+        <div class="rates">
+          <article class="rate reveal">
+            <header class="rate__head"><h3 class="rate__title">Podcast Audio</h3><span class="rate__tag">01</span></header>
+            <table class="rate__table">
+              <thead><tr><th scope="col">Service</th><th scope="col">Lebanon</th><th scope="col">International</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Audio editing &amp; cleanup<small>Up to 30 min</small></th><td>$30</td><td>$45</td></tr>
+                <tr><th scope="row">Mixing &amp; mastering<small>Up to 30 min</small></th><td>$45</td><td>$70</td></tr>
+                <tr><th scope="row">Full audio production<small>Up to 30 min</small></th><td>$65</td><td>$100</td></tr>
+                <tr><th scope="row">Long-form episode<small>30–60 min</small></th><td>$90</td><td>$140</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rate reveal">
+            <header class="rate__head"><h3 class="rate__title">Video &amp; Content</h3><span class="rate__tag">02</span></header>
+            <table class="rate__table">
+              <thead><tr><th scope="col">Service</th><th scope="col">Lebanon</th><th scope="col">International</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Video podcast editing<small>Up to 30 min</small></th><td>$90</td><td>$150</td></tr>
+                <tr><th scope="row">Video podcast editing<small>30–60 min</small></th><td>$150</td><td>$250</td></tr>
+                <tr><th scope="row">Short-form cut<small>From supplied footage · up to 60 sec</small></th><td>$25</td><td>$45</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rate reveal">
+            <header class="rate__head"><h3 class="rate__title">Music Production</h3><span class="rate__tag">03</span></header>
+            <table class="rate__table">
+              <thead><tr><th scope="col">Service</th><th scope="col">Lebanon</th><th scope="col">International</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Beat / instrumental production<small>Per track</small></th><td>$170</td><td>$300+</td></tr>
+                <tr><th scope="row">Custom composition / arrangement<small>Per track</small></th><td>$150</td><td>$350+</td></tr>
+                <tr><th scope="row">Sound design<small>Per project</small></th><td>$150</td><td>$400+</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rate reveal">
+            <header class="rate__head"><h3 class="rate__title">Mixing &amp; Mastering</h3><span class="rate__tag">04</span></header>
+            <table class="rate__table">
+              <thead><tr><th scope="col">Service</th><th scope="col">Lebanon</th><th scope="col">International</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Stereo mixing<small>Per song</small></th><td>$100</td><td>$180</td></tr>
+                <tr><th scope="row">Stereo mastering<small>Per song</small></th><td>$45</td><td>$80</td></tr>
+                <tr><th scope="row">Mix + master bundle<small>Per song</small></th><td>$140</td><td>$220</td></tr>
+                <tr><th scope="row">Stem mastering<small>Per song</small></th><td>$80</td><td>$150</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rate reveal">
+            <header class="rate__head"><h3 class="rate__title">Film &amp; Immersive Audio</h3><span class="rate__tag">05</span></header>
+            <table class="rate__table">
+              <thead><tr><th scope="col">Service</th><th scope="col">Lebanon</th><th scope="col">International</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Film / video audio post<small>Per project</small></th><td>$250</td><td>$600+</td></tr>
+                <tr><th scope="row">Audio restoration<small>Per hour</small></th><td>$40</td><td>$100</td></tr>
+                <tr><th scope="row">Dolby Atmos mix<small>Per song</small></th><td>$250</td><td>$700+</td></tr>
+                <tr><th scope="row">Atmos deliverables / ADM export<small>Per project</small></th><td>Quoted</td><td>Quoted</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rate rate--accent reveal">
+            <header class="rate__head"><h3 class="rate__title">Custom Composition</h3><span class="rate__tag">06</span></header>
+            <table class="rate__table rate__table--single">
+              <thead><tr><th scope="col">Deliverable</th><th scope="col">Starting price</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">30-second custom musical cue</th><td>$100–200</td></tr>
+                <tr><th scope="row">60-second advertising composition</th><td>$200–400</td></tr>
+                <tr><th scope="row">2-minute cinematic composition</th><td>$300–600</td></tr>
+                <tr><th scope="row">3–5-minute film score</th><td>$500–1,500+</td></tr>
+              </tbody>
+            </table>
+            <p class="rate__note">Rates are estimates and vary with duration, musical complexity, revisions, usage, exclusivity, and licensing. Scope and rights are confirmed in a written quote before starting.</p>
+          </article>
+        </div>
+
+        <div class="terms reveal">
+          <div class="terms__head">
+            <p class="label">Booking &amp; project terms</p>
+            <p class="terms__place">Beirut, Lebanon · Remote clients welcome</p>
+            <a class="btn btn--primary" href="mailto:soundfortuneproductions@gmail.com?subject=Quote%20request%20%E2%80%94%20Sound%20Fortune%20Productions">Request a custom quote</a>
+          </div>
+          <ul class="terms__list">
+            <li>Rates are starting prices; final quotes depend on duration, complexity, track count, and deliverables.</li>
+            <li>Includes one reasonable revision unless otherwise agreed. Additional revisions or scope changes are quoted separately.</li>
+            <li>50% deposit to book; balance due before final delivery.</li>
+            <li>Rush delivery, extra versions, stems, session files, and source footage may incur additional fees.</li>
+            <li>Dolby Atmos pricing assumes a suitable prepared session and agreed delivery specification; complex object-based work is quoted separately.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -328,7 +484,7 @@
       <div class="container about__grid">
         <div class="about__visual reveal">
           <figure class="about__frame">
-            <img src="assets/images/studio-hero.jpg" alt="Sound Fortune Productions studio workspace with monitors and purple ambient lighting" loading="lazy" width="1600" height="901">
+            <img src="assets/images/studio-hero.jpg" alt="Sound Fortune Productions studio: desk with monitor, keyboard, studio speakers and guitar under purple and warm lighting" loading="lazy" width="1448" height="1086">
           </figure>
           <figure class="about__emblem">
             <img src="assets/images/sound-fortune-emblem.jpg" alt="Sound Fortune Productions emblem" loading="lazy" width="600" height="600">
@@ -336,7 +492,7 @@
         </div>
 
         <div class="about__body">
-          <p class="eyebrow reveal"><span class="idx">04</span> About the Artist</p>
+          <p class="eyebrow reveal"><span class="idx">05</span> About the Artist</p>
           <h2 class="section__title reveal" id="about-title">Ziad Mahjoub</h2>
           <p class="about__roles reveal">Music Producer · Composer · Sound Designer · Audio Post-Production</p>
           <p class="about__text reveal">Lebanese composer and music producer crafting original music, cinematic soundscapes, and immersive audio experiences. Specializing in music production, film scoring, sound design, audio post-production, podcast production, and cinematic video editing.</p>
@@ -359,8 +515,8 @@
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact__glow" aria-hidden="true"></div>
       <div class="container contact__inner">
-        <p class="eyebrow reveal"><span class="idx">05</span> Let's Connect</p>
-        <p class="contact__kicker reveal">Have a project in mind?</p>
+        <p class="eyebrow reveal"><span class="idx">06</span> Let's Connect</p>
+        <p class="contact__kicker reveal">Have a project in mind? Based in Beirut, Lebanon. Remote projects welcome.</p>
         <h2 class="contact__title reveal" id="contact-title">Let's create something <span class="grad">extraordinary.</span></h2>
         <div class="contact__actions reveal">
           <a class="btn btn--primary btn--lg" href="mailto:soundfortuneproductions@gmail.com?subject=Project%20enquiry%20%E2%80%94%20Sound%20Fortune%20Productions">
@@ -379,7 +535,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__brand">Sound Fortune Productions <span>Music · Sound · Moving Images</span></p>
+      <p class="footer__brand">Sound Fortune Productions <span>Music · Sound · Moving Images · Beirut, Lebanon</span></p>
       <p class="footer__copy">© 2026 Sound Fortune Productions. All Rights Reserved.</p>
       <a class="totop" href="#home" aria-label="Back to top">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
