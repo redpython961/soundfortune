@@ -658,3 +658,24 @@ img.is-missing { opacity: 0; }
   .rate__table tbody th { font-size: 14px; }
 }
 @media (max-width: 1180px) and (min-width: 961px) { .nav__links a { padding: 8px 10px; } .nav__inner { gap: 16px; } }
+
+/* =========================================================
+   v3 ADDITIONS: Film · Screenwriting · Directing
+   ========================================================= */
+.comp--flip { grid-template-columns: 1.1fr 1fr; }
+.comp--flip .comp__intro { order: 2; }
+.film__cta { margin: 26px 0 22px; font-family: var(--f-display); font-weight: 600; letter-spacing: -.02em; line-height: 1.15; font-size: clamp(22px, 2.4vw, 30px); background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.film__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 900px) { .comp--flip { grid-template-columns: 1fr; } .comp--flip .comp__intro { order: 0; } }
+
+/* wide pricing card + package table */
+.rate--wide { grid-column: 1 / -1; }
+.rate--wide .rate__body { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.rate--wide .rate__note { border-top: 0; border-left: 1px solid var(--line-2); padding: 4px 0 4px 24px; }
+@media (max-width: 900px) {
+  .rate--wide .rate__body { grid-template-columns: 1fr; gap: 0; }
+  .rate--wide .rate__note { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 12px; }
+}
+.rate__sub { margin-top: 4px; font-size: 14px; color: var(--text-2); }
+.rate__head > div { min-width: 0; }
+@media (max-width: 900px) { .rate--wide { grid-column: auto; } }

@@ -16,8 +16,8 @@ This is a full redesign of <https://www.soundfortuneproductions.com/>. It keeps 
 | — | **Hero** | Headline "Where sound meets vision", studio photo with animated purple aurora, original gold logo banner, scroll indicator |
 | 01 | **Visual Work** | *Action Figure Alpha I*: poster, description, full credits, video gallery (Trailer, Full Sequence, Visual Clip) in a lightbox, key-art still |
 | 02 | **Music** | Syntric (*Purple Nights*), X-61 (*Parallel Voices*), Daisy Blue (*The Blue Note*), Ziad Mahjoub (*Lotus*), each with its original artwork and a custom audio player, plus the Dolby Atmos release *The Journey* |
-| 03 | **Services** | Audio Post-Production · Film Scoring & Original Music · Podcast Production · Cinematic Video & Visual Editing, plus a Custom Composition block (what it is, five example services, how it differs from beat production, mixing and mastering) |
-| 04 | **Pricing** | Service menu with Lebanon and International starting rates (USD) in five categories, Custom Composition starting rates, booking and project terms |
+| 03 | **Services** | Audio Post-Production · Film Scoring & Original Music · Podcast Production · Cinematic Video & Visual Editing, plus a Film · Screenwriting · Directing block (seven creative services) and a Custom Composition block (what it is, five example services, how it differs from beat production, mixing and mastering) |
+| 04 | **Pricing** | Nine rate cards: five audio/post categories with Lebanon and International rates (USD), Custom Composition, Screenwriting, Film Directing, and Full Creative Package; plus booking and project terms |
 | 05 | **About** | Ziad Mahjoub biography, roles, focus areas, studio image |
 | 06 | **Contact** | "Let's create something extraordinary", email button, copy-to-clipboard email |
 | — | **Footer** | © 2026 Sound Fortune Productions. All Rights Reserved. Back to top |
